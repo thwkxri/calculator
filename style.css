@@ -67,10 +67,6 @@ body{
   background-color: #eb836a;
 }
 
-.btn:hover{
-  filter: brightness(80%);
-  transition: filter .3s ease;
-}
 
 @media (max-width: 600px){
   .calculator{
@@ -90,11 +86,14 @@ body{
     color: black;
     border-radius: 50%;
     cursor: pointer;
-    transition: filter .3s ease;
   }
 
-  .btn:active {
+}
+
+@media (hover: hover){
+  .btn:hover{
     filter: brightness(80%);
     transition: filter .3s ease;
   }
 }
+
