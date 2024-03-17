@@ -66,3 +66,45 @@ body{
   filter: brightness(80%);
   transition: filter .3s ease;
 }
+
+@media (max-width: 600px){
+  .calculator{
+    border: 3px solid black;
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    background-color: #2b3549;
+  }
+  
+  #input{
+    padding-left: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    width: 90%;
+    top: 30px;
+    font-size: 30px;
+    border-radius: 5px;
+  }
+  
+  .btns{
+    position: absolute;
+    text-align: center;
+    padding-top: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .btn{
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    font-size: 25px;
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: filter .3s ease;
+  }
+}
