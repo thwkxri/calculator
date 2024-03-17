@@ -92,4 +92,9 @@ body{
     cursor: pointer;
     transition: filter .3s ease;
   }
+
+  .btn:active {
+    filter: brightness(80%);
+    transition: filter .3s ease;
+  }
 }
