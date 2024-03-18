@@ -30,88 +30,108 @@ function endsWithOperator(value) {
 });
 
 one.addEventListener('click', (e) => {
-  input.value += '1'; 
-  result += '1';
+  if (input.value != 'Ошибка'){
+    input.value += '1'; 
+    result += '1';
+  }
 });
 
 two.addEventListener('click', (e) => {
-  input.value += '2'; 
-  result += '2';
+  if (input.value != 'Ошибка'){
+    input.value += '2'; 
+    result += '2';
+  }
 });
 
 three.addEventListener('click', (e) => {
-  input.value += '3'; 
-  result += '3';
+  if (input.value != 'Ошибка'){
+    input.value += '3'; 
+    result += '3';
+  }
 });
 
 four.addEventListener('click', (e) => {
-  input.value += '4'; 
-  result += '4';
+  if (input.value != 'Ошибка'){
+    input.value += '4'; 
+    result += '4';
+  }
 });
 
 five.addEventListener('click', (e) => {
-  input.value += '5'; 
-  result += '5';
+  if (input.value != 'Ошибка'){
+    input.value += '5'; 
+    result += '5';
+  }
 });
 
 six.addEventListener('click', (e) => {
-  input.value += '6'; 
-  result += '6';
+  if (input.value != 'Ошибка'){
+    input.value += '6'; 
+    result += '6';
+  }
 });
 
 seven.addEventListener('click', (e) => {
-  input.value += '7'; 
-  result += '7';
+  if (input.value != 'Ошибка'){
+    input.value += '7'; 
+    result += '7';
+  }
 });
 
 eight.addEventListener('click', (e) => {
-  input.value += '8'; 
-  result += '8';
+  if (input.value != 'Ошибка'){
+    input.value += '8'; 
+    result += '8';
+  }
 });
 
 nine.addEventListener('click', (e) => {
-  input.value += '9'; 
-  result += '9';
+  if (input.value != 'Ошибка'){
+    input.value += '9'; 
+    result += '9';
+  }
 });
 
 zero.addEventListener('click', (e) => {
-  input.value += '0'; 
-  result += '0';
+  if (input.value != 'Ошибка'){
+    input.value += '0'; 
+    result += '0';
+  }
 });
 
 plus.addEventListener('click', (e) => {
-  if (!endsWithOperator(input.value) && input.value != '') {
-    input.value += '+';
+  if (!endsWithOperator(input.value) && input.value != '' && input.value != 'Ошибка') {
+    input.value = '+';
     result += '+';
   }
 });
 
 minus.addEventListener('click', (e) => {
-  if (!endsWithOperator(input.value)) {
-    input.value += '-';
+  if (!endsWithOperator(input.value) && input.value != 'Ошибка') {
+    input.value = '-';
     result += '-';
   }
 });
 
 umn.addEventListener('click', (e) => {
-  if (!endsWithOperator(input.value) && input.value != '') {
-    input.value += '*';
+  if (!endsWithOperator(input.value) && input.value != '' && input.value != 'Ошибка') {
+    input.value = '*';
     result += '*';
   }
 });
 
 del.addEventListener('click', (e) => {
-  if (!endsWithOperator(input.value) && input.value != '') {
-    input.value += '/';
+  if (!endsWithOperator(input.value) && input.value != '' && input.value != 'Ошибка') {
+    input.value = '/';
     result += '/';
   }
 });
 
 ravno.addEventListener('click', (e) => {
   if (eval(result) == Infinity){
-    input.value = 'Error';
+    input.value = 'Ошибка';
   }
-  else{
+  else if (eval(result) != undefined){
     let endValue = eval(result);
     result = endValue;
     input.value = endValue;
