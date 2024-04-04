@@ -26,7 +26,7 @@ function endsWithOperator(value) {
 
 С.addEventListener('click', (e) => {
   input.value = ''; 
-  result = true
+  result = '';
 });
 
 one.addEventListener('click', (e) => {
