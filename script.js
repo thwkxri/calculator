@@ -26,7 +26,7 @@ function endsWithOperator(value) {
 
 С.addEventListener('click', (e) => {
   input.value = ''; 
-  result = '';
+  result = true
 });
 
 one.addEventListener('click', (e) => {
@@ -101,28 +101,28 @@ zero.addEventListener('click', (e) => {
 
 plus.addEventListener('click', (e) => {
   if (!endsWithOperator(input.value) && input.value != '' && input.value != 'Ошибка') {
-    input.value = '+';
+    input.value += '+';
     result += '+';
   }
 });
 
 minus.addEventListener('click', (e) => {
   if (!endsWithOperator(input.value) && input.value != 'Ошибка') {
-    input.value = '-';
+    input.value += '-';
     result += '-';
   }
 });
 
 umn.addEventListener('click', (e) => {
   if (!endsWithOperator(input.value) && input.value != '' && input.value != 'Ошибка') {
-    input.value = '*';
+    input.value += '*';
     result += '*';
   }
 });
 
 del.addEventListener('click', (e) => {
   if (!endsWithOperator(input.value) && input.value != '' && input.value != 'Ошибка') {
-    input.value = '/';
+    input.value += '/';
     result += '/';
   }
 });
